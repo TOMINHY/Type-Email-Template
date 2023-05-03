@@ -2,9 +2,11 @@ mixin menuItem(title, active= "")
   li.menu-item(class= active)
     a.menu-link(href="#!")= title
 
-mixin coundownItem(title, desc)
+mixin coundownItem(title,subtitle, desc)
   .coundown-item 
-    h3.coundown-title= title 
+    h3.coundown-title 
+      span.counter=title
+      span=subtitle
     p.coundown-desc= desc
 
 mixin newsletterItem(src, caption, text, button, active= "") 

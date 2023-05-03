@@ -8,6 +8,10 @@ $(document).ready(function(){
     prevArrow:"<button type='button' class='slick-prev slick-arrow'><i class='fa-solid fa-angle-left' aria-hidden='true'></i></button>",
     nextArrow:"<button type='button' class='slick-next slick-arrow'><i class='fa-solid fa-angle-right' aria-hidden='true'></i></button>",
   });
+  $('.counter').counterUp({
+    time: 2000,
+    delay: 10,
+  });
 });
 
 window.addEventListener("load", function() {
@@ -77,3 +81,6 @@ laibraryTab.forEach(function(item,index) {
     laibraryList.classList.add("is-active"); 
   } 
 })
+
+
+
