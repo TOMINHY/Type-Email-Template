@@ -1,0 +1,122 @@
+.header {
+  padding-top: 48px;
+  margin-bottom: var(--section-spacing);
+  background: linear-gradient(to bottom,$header-bg 80%, $body-bg 20%);
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    cursor: pointer;
+  }
+  &-text {
+    @include textGradient();
+    font-size: 25px;
+    line-height: calc(32 / 25);
+    font-weight: 600;
+  }
+  &-login {
+    background: rgb($gray1, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 25px;
+    line-height: calc(26 / 16);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    a {
+      color: inherit;
+    }
+  }
+  &-bars {
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: transparent;
+    }
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(to bottom, $primary-yellow, $primary-green);
+    }
+  }
+  &-content {
+    max-width: 837px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &-heading {
+    @include textGradient();
+    font-weight: 600;
+    font-size: 52px;
+    line-height: calc(62 / 52);
+    margin-bottom: 55px;
+  }
+  &-bottom {
+    margin-bottom: 88px;
+  }
+  &-buttons {
+    @include flex(center, center);
+    gap: 0 38px;
+  }
+  &-works {
+    @include flex(center);
+    gap: 0 16px;
+    color: white;
+    font-size: 18px;
+    line-height: calc(48 / 18);
+    img {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    background: linear-gradient(to bottom,$header-bg 88%, $body-bg 12%);
+    &-top {
+      margin-bottom: 55px;
+    }
+    &-bottom {
+      margin-bottom: 64px;
+    }
+    &-text {
+      font-size: 18px;
+    }
+    &-login {
+      margin-right: 45px;
+      margin-left: auto;
+      font-size: 12px;
+      line-height: calc(18 / 12);
+    }
+    &-bars {
+      @include flex(center,space-between, column);
+      gap: 5px;
+    }
+    &-heading {
+      font-size: 30px;
+      line-height: calc(40 / 30);
+      max-width: 281px;
+      margin: 0 auto 35px;
+    }
+    &-works {
+      span {
+        display: none;
+      }
+    }
+    &-buttons {
+      gap: 20px;
+    }
+  }
+  
+}

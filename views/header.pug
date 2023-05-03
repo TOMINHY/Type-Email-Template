@@ -1,0 +1,27 @@
+header.header 
+  .container
+    .header-top
+      .header-logo 
+        img(src="./images/img-logo.svg", alt="")
+        span.header-text Type Email 
+      ul.menu
+        +menuItem("Home", "is-active")
+        +menuItem("Pricing")
+        +menuItem("Reasources")
+        +menuItem("Support")
+      .header-login 
+        a(href="#!") Login 
+      .header-bars 
+        span
+        span
+        span
+    .header-bottom 
+      .header-content 
+        h1.header-heading Online shoppers into loyal, lifetime customers with email &amp; sms marketing
+        .header-buttons 
+          a.button.button--primary.header-getstarted(href="#!") Get Started
+          .header-works 
+            span How it works
+            img(srcset="./images/img-header-play.png 2x")
+    .header-banner 
+      img(srcset="./images/img-banner.png 2x", alt="")

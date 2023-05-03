@@ -1,0 +1,167 @@
+.laibrary {
+  --column: 3;
+  padding-top: 154px;
+  &-main {
+    padding: 0 45px;
+  }
+  &-heading {
+    margin-bottom: 10px;
+  }
+  &-text {
+    max-width: 327px;
+    margin: 0 auto 30px;
+  }
+  &-tabs {
+    @include flex(flex-start, center);
+    gap: 25px;
+    max-height: 50px;
+    margin-bottom: 86px;
+  }
+  &-tab {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: calc(25 / 20);
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    a {
+      color: inherit;
+    }
+    &:hover {
+      color: $primary-yellow;
+      background-color: $header-bg;
+    }
+  }
+  &-tab.is-active {
+    color: $primary-yellow;
+    background-color: $header-bg;
+    transition: all 0.2s linear;
+  }
+  &-list {
+    display: none;
+  }
+  &-list.is-active {
+    display: grid;
+    grid-template-columns: repeat(var(--column), minmax(0, 1fr));
+    grid-gap: 30px;
+    transition: all 0.2s linear;
+  }
+  &-item {
+    margin-bottom: 38px;
+    cursor: pointer;
+  }
+  &-item:hover &-info {
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+  }
+  &-image {
+    border-radius: 20px;
+    height: 227px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+  &-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s linear;
+  }
+  &-link {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: calc(22 / 17);
+    color: $primary-green;
+    margin-bottom: 10px;
+    @include textClamp(2);
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: calc(32 / 22);
+    color: $header-bg;
+    max-width: 200px;
+    margin-top: auto;
+    flex: 1;
+    @include textClamp(2);
+  }
+  &-button {
+    @include flex(center);
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-link {
+      height: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 767.98px) {
+    padding-top: 68px;
+    &-main {
+      padding: 0;
+    }
+    &-heading {
+      max-width: 262px;
+      margin: 0 auto 10px;
+      letter-spacing: -0.02em;
+    }
+    &-text {
+      color: #363636;
+      max-width: 256px;
+    }
+    &-tabs {
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+    &-tab {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+    &-list.is-active {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 90%;
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      grid-template-columns: unset;
+      padding: 20px;
+      }
+      &-list.is-active::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      &-list.is-active > *{
+        scroll-snap-align: center;
+      }
+    }
+    &-item {
+      margin-bottom: 20px;
+    }
+    &-button {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      max-width: 327px;
+      margin: 0 auto;
+    }
+  }

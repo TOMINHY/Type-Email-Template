@@ -1,0 +1,25 @@
+mixin menuItem(title, active= "") 
+  li.menu-item(class= active)
+    a.menu-link(href="#!")= title
+
+mixin coundownItem(title, desc)
+  .coundown-item 
+    h3.coundown-title= title 
+    p.coundown-desc= desc
+
+mixin newsletterItem(src, caption, text, button, active= "") 
+  .newsletter-item
+    .newsletter-image 
+      img(srcset= src, alt="")
+    h4.newsletter-caption 
+      p= caption
+    p.newsletter-text= text
+    a.newsletter-more(href="#!", class= active)= button
+
+mixin serviceItem(src, title, desc, active= "")
+  .service-item(class= active) 
+    .service-image 
+      img(srcset= src, alt="")
+    h4.g-heading.g-heading--small.service-title= title
+    p.g-text= desc
+

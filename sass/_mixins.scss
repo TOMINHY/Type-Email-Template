@@ -1,0 +1,58 @@
+@mixin flex($align: stretch, $justyfy: flex-start, $direction: row, $wrap: nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justyfy;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin textGradient($color1: $primary-yellow, $color2: $primary-green) {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(93.52deg, $color1 8.71%, $color2 98.16%);
+}
+
+@mixin textClamp( $row){
+  display:-webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+@mixin absoluteCenter($direction: "left") {
+  position: absolute;
+  @if($direction == "left") {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if($direction == "top") {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if($direction == "both") {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin minWidth($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minMax($min, $max) {
+  @media screen and (min-width: $min) and (max-width:$max) {
+    @content;
+  }
+}

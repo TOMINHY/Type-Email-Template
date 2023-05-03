@@ -1,0 +1,137 @@
+.testmonial {
+  padding-top: var(--section-spacing);
+  &-main {
+    padding-bottom: 60px;
+    position: relative;
+  }
+  .slick-arrow {
+    font-size: 20px;
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -60px;
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+  }
+  .slick-prev {
+    background-color: #DCD4C5;
+    transform: translateX(-68px);
+  }
+  .slick-next {
+    background-color: $primary-green;
+    color: white;
+  }
+  &-heading {
+    max-width: 596px;
+    margin: 0 auto 75px;
+  }
+  &-container {
+    @include flex(center, space-between);
+  }
+  &-content{
+    display: flex!important;
+    align-items: center;
+    gap: 0 77px;
+  }
+  &-image {
+    height: 470px;
+    max-width: 500px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 3px solid #B0B0B0;
+    border-radius: 42px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-info {
+    flex: 1;
+  }
+  &-text {
+    font-size: 23px;
+    line-height: calc(40 / 23);
+    margin-bottom: 27px;
+    word-break: break-word;
+    letter-spacing: -0.04em;
+  }
+  &-quotes {
+    @include flex(center);
+    gap: 0 68px;
+  }
+  &-job {
+    font-size: 17px;
+    line-height: calc(22 / 17);
+    color: $gray3;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+  &-quote {
+    position: relative;
+    transform: translateY(-27px);
+  }
+  &-star {
+    margin-bottom: 10px;
+  }
+  &-count {
+    font-size: 17px;
+    line-height: calc(22 / 17);
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-content {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 767.98px) {
+    &-main {
+      padding-bottom: 108px;
+    }
+    &-heading {
+      max-width: 241px;
+      margin: 0;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    &-content {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &-info {
+      width: 100%;
+      flex: unset;
+      margin-bottom: 40px;
+    }
+    &-text {
+      max-width: 317px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      margin-bottom: 25px;
+    }
+    &-quote {
+      display: none;
+    }
+    &-job {
+      margin-bottom: 10px;
+    }
+    &-image {
+      height: 296px;
+      width: 100%;
+    }
+    .slick-arrow {
+      bottom: -108px;
+      width: 45px;
+      height: 45px;
+    }
+    .slick-prev {
+      transform: translate(-55px);
+    }
+  }
+  
+}

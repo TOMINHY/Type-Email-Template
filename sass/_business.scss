@@ -1,0 +1,68 @@
+.business {
+  margin-top: var(--section-spacing);
+  padding: 65px 0;
+  background-color: $header-bg;
+  &-main {
+    @include flex(center, space-between);
+    gap: 0 80px;
+  }
+  &-content {
+    max-width: 590px;
+    width: 100%;
+  }
+  &-heading {
+    text-align: left;
+    color: white;
+    margin-bottom: 10px;
+  }
+  &-text {
+    text-align: left;
+    color: $gray1;
+    max-width: 365px;
+    margin-bottom: 40px;
+  }
+  &-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 15px;
+  }
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 60px 0 80px;
+    &-main {
+      flex-direction: column;
+      gap: 0 80px;
+    }
+    &-heading {
+      max-width: 255px;
+      text-align: center;
+      margin: 0 auto 10px;
+    }
+    &-text {
+      text-align: left;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      max-width: 286px;
+      margin: 0 auto 63px;
+    }
+    &-button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-button {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  
+}
