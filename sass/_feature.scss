@@ -39,7 +39,6 @@
   }
   &-image {
     flex: 1;
-    height: 489px;
     img {
       width: 100%;
       height: 100%;
@@ -70,8 +69,8 @@
     }
     &-bg {
       left: -9%;
-      top: -45px;
-      right: 22%;
+      top: -6%;
+      right: 30%;
       bottom: 65.5%;
     }
     &-desc {
@@ -92,5 +91,19 @@
       padding-bottom: 15px;
     }
   }
-  
+  @media screen and (max-width:414px) and (max-width:479.98px) {
+    &-bg {
+      top: -7%;
+    }
+  }
+  @media screen and (max-width: 379.98px) {
+    &-bg {
+      top: -5%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    &-bg {
+      right: 18%;
+    }
+  }
 }

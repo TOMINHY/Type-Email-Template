@@ -176,9 +176,10 @@
     }
     &-bg {
       bottom: 61.6%;
-      top: 25px;
+      top: 1%;
       left: 18%;
       right: -4%;
+      height: 420px;
     }
     &-info {
       width: 100%;
@@ -205,5 +206,14 @@
       max-width: 265px;
     }
   }
-  
+  @media screen and (min-width: 414px) and (max-width: 479.98px) {
+    &-bg {
+      left: 28%; 
+    }
+  }
+  @media screen and (max-width: 320px) {
+    &-bg {
+      top: 3%; 
+    }
+  }
 }
